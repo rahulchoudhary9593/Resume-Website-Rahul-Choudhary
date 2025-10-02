@@ -31,7 +31,7 @@ body {
   height: 2rem;
   background: #bac1c2;
   margin-top: 10px;
-  color: #c5d5c5;
+  color: #000000;
   text-align: left;
   border-radius: 10%;
   padding: 0.25rem;
@@ -133,7 +133,7 @@ body {
 /* @media (max-width: 100vw) {
   .contact-list {
     flex-direction: column;
-    /* stack buttons vertically */
+    /* stack buttons vertically 
     align-items: center;
     gap: 12px;
   }
@@ -146,8 +146,8 @@ body {
     font-size: 1.1rem;
     grid-template-columns: repeat(2, 1fr);
   }
-} */
-
+    
+*/
 
 
 .lift {
