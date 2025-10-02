@@ -9,11 +9,11 @@ function openEmail(e) {
     if (isMobile) {
         //  Mobile → open default mail app
         window.location.href =
-            "mailto:rahulchoudhary1715@gmail.com?subject=Inquiry%20About%20Your%20Work&body=Hello%20Rahul%20Choudhary,%0A%0AI%20hope%20this%20message%20finds%20you%20well.%20My%20name%20is%20[Your%20Name],%20and%20I%20am%20reaching%20out%20to%20learn%20more%20about%20your%20work%20and%20experience%20in%20[your%20field].%0A%0AHere%20are%20my%20details%20for%20your%20reference:%0A- Name: [Your Name]%0A- Email: [Your Email]%0A- [Any other relevant details]%0A%0AI%20would%20greatly%20appreciate%20it%20if%20you%20could%20share%20some%20insights%20or%20guidance%20regarding%20your%20work.%20Thank%20you%20for%20your%20time%20and%20consideration.%0A%0ABest%20regards,%0A[Your Name]";
+            "mailto:rahulchoudhary1715@gmail.com?subject=Job%20Opportunity%20at%20[Company%20Name]&body=Hello%20Rahul%20Choudhary,%0A%0AI%20am%20[HR%20Name]%20from%20[Company%20Name].%20We%20are%20interested%20in%20discussing%20a%20potential%20job%20opportunity%20with%20you%20for%20the%20position%20of%20[Position%20Title].%0A%0APlease%20let%20us%20know%20a%20suitable%20time%20to%20connect%20or%20reply%20to%20this%20email%20for%20further%20details.%0A%0ABest%20regards,%0A[HR%20Name]%0A[Company%20Name]%0A[HR%20Email]%0A[HR%20Contact]";
     } else {
         //  Desktop → open Gmail in browser
         window.open(
-            "https://mail.google.com/mail/?view=cm&fs=1&to=rahulchoudhary1715@gmail.com&su=Inquiry%20About%20Your%20Work&body=Hello%20Rahul%20Choudhary,%0A%0AI%20hope%20this%20message%20finds%20you%20well.%20My%20name%20is%20[Your%20Name],%20and%20I%20am%20reaching%20out%20to%20learn%20more%20about%20your%20work%20and%20experience%20in%20[your%20field].%0A%0AHere%20are%20my%20details%20for%20your%20reference:%0A- Name: [Your Name]%0A- Email: [Your Email]%0A- [Any other relevant details]%0A%0AI%20would%20greatly%20appreciate%20it%20if%20you%20could%20share%20some%20insights%20or%20guidance%20regarding%20your%20work.%20Thank%20you%20for%20your%20time%20and%20consideration.%0A%0ABest%20regards,%0A[Your Name]",
+            "https://mail.google.com/mail/?view=cm&fs=1&to=rahulchoudhary1715@gmail.com&su=Job%20Opportunity%20at%20[Company%20Name]&body=Hello%20Rahul%20Choudhary,%0A%0AI%20am%20[HR%20Name]%20from%20[Company%20Name].%20We%20are%20interested%20in%20discussing%20a%20potential%20job%20opportunity%20with%20you%20for%20the%20position%20of%20[Position%20Title].%0A%0APlease%20let%20us%20know%20a%20suitable%20time%20to%20connect%20or%20reply%20to%20this%20email%20for%20further%20details.%0A%0ABest%20regards,%0A[HR%20Name]%0A[Company%20Name]%0A[HR%20Email]%0A[HR%20Contact]",
             "_blank"
         );
     }
