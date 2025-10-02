@@ -7,6 +7,8 @@
 
 body {
   background-color: #f0f0f0;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400; 
 }
 
 
@@ -364,5 +366,115 @@ body {
   .projects-list {
     grid-template-columns: 1fr;
     /* mobile view me ek hi column */
+  }
+}
+
+
+
+/* Media Query */
+
+@media only screen and (max-width: 768px) {
+
+  .resume-container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .my_name {
+    font-size: 2rem;
+    letter-spacing: 0.5rem; 
+    white-space: normal;
+  }
+
+  .my_skill {
+    font-size: 1.3rem;
+  }
+
+  .contact ul {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .contact li {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .languages {
+    max-width: 100%;
+  }
+
+  .languages li {
+    font-size: 1.3rem;
+    padding: 8px 0;
+  }
+
+  .languages .stars {
+    font-size: 1.2rem;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .project-card {
+    padding: 12px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card li {
+    font-size: 0.9rem;
+  }
+
+  .project-card a {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  .skill ul,
+  .certificate ul {
+    grid-template-columns: 1fr;
+  }
+
+  .skill li,
+  .certificate li {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .my_name {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .my_skill {
+    font-size: 1rem;
+  }
+
+  .contact li,
+  .skill li,
+  .certificate li {
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .project-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .project-card li {
+    font-size: 0.85rem;
+  }
+
+  .project-card a {
+    font-size: 0.8rem;
+    padding: 4px 8px;
   }
 }
