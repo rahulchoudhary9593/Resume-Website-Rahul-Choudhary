@@ -1,0 +1,328 @@
+/* Author - Rahul Choudhary */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(230, 233, 235);
+}
+
+
+.lift {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 180ms ease, text-shadow 180ms ease;
+    text-decoration: none;
+    color: #111;
+}
+
+.lift:hover {
+    transform: translateY(-6px);
+    text-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Headings */
+.headings {
+    text-align: center;
+    width: 9rem;
+    height: 2rem;
+    background: #bac1c2;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    border-radius: 10%;
+    padding: 0.25rem;
+}
+.headings:hover {
+    background: #001c2b;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.word_wrap {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.resume-container {
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+}
+
+/* My Name  */
+.my_name {
+    text-align: center;
+    font-weight: bolder;
+    white-space: nowrap;
+    font-size: 400%;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.my_skill {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.resume-container:hover {
+    background: #0077b6;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+@media (max-width: 480px) {
+  .my_name {
+    letter-spacing: 1px;
+  }
+  .my_skill {
+    font-size: 20px;  /* readable on small phones */
+  }
+}
+
+
+/* Contact */
+
+.contact a{
+    text-decoration: none;
+    color: #000000;
+}
+.contact ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.contact li {
+    background: #e9f5ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+.contact li:hover {
+    background: #96acb8;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+
+.lift { /* hower effect  */
+    transform: translateY(0);
+    transition: transform 180ms ease, text-shadow 180ms ease;
+    text-decoration: none;
+    color: #111;
+}
+
+.lift:hover {
+    /* hower effect  */
+    transform: translateY(-6px);
+    text-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Education style*/
+.education_details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.education_details th,
+.education_details td {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+.education_details th {
+    background: #0077b6;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.education_details td{
+    font-size: 1rem;
+}
+.education_details a{
+  color: #000000;
+  text-decoration: none;
+}
+.education_details a:hover{
+  color: #0077b6;
+
+}
+
+
+/* Skills */
+.skill ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.skill li {
+    background: #e9f5ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+.skill li:hover {
+    background: #0077b6;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* certificate */
+
+.certificate ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.certificate li {
+    background: #e9f5ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.certificate li:hover {
+    background: #96acb8;
+    color: #1358fa;
+    transform: scale(1.05);
+}
+.certificate a{
+    text-transform: none;
+    text-decoration: none;
+    color: #111;
+    font-size: 1.5rem;
+}
+
+
+
+/* Language */
+
+.languages {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  max-width: 60vw;
+}
+
+.languages ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.languages li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;         /* bigger text size */
+  padding: 10px 0;
+  border-bottom: 5px dashed #ddd;
+}
+
+.languages li:last-child {
+  border-bottom: none;
+}
+
+.languages .stars {
+  font-size: 1.5rem;        /* bigger star size */
+  color: #f39c12;         /* gold stars */
+  letter-spacing: 3px;
+}@media (max-width: 768px) {
+  .languages .certificate{
+    grid-template-columns: 1fr; /* mobile view me ek hi column */
+  }
+}
+
+
+
+/* Projects */
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  list-style: none;
+}
+
+.project-card {
+  background: #f3f7ff;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.project-card:hover {
+  background: #0077b6;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.project-card ul {
+  margin: 10px 0;
+  padding-left: 18px;
+}
+
+.project-card li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #111;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.project-card:hover a {
+  background: #fff;
+  color: #da0909;
+}
+
+@media (max-width: 768px) {
+  .projects-list {
+    grid-template-columns: 1fr; /* mobile view me ek hi column */
+  }
+}
+
+
