@@ -130,7 +130,7 @@ body {
   transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 200px) {
   .contact-list {
     flex-direction: column;
     /* stack buttons vertically */
