@@ -130,7 +130,7 @@ body {
   transform: scale(1.05);
 }
 
-@media (max-width: 100vw) {
+/* @media (max-width: 100vw) {
   .contact-list {
     flex-direction: column;
     /* stack buttons vertically */
@@ -146,7 +146,7 @@ body {
     font-size: 1.1rem;
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} */
 
 
 
