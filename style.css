@@ -107,6 +107,7 @@ body {
 .contact a {
   text-decoration: none;
   color: #000000;
+  font-size: 1.6rem;
 }
 
 .contact ul {
@@ -166,6 +167,19 @@ body {
   text-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
+/* About Me */
+.about_section{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word
+}
+.about_section p{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
 /* Education style*/
 .education_details {
