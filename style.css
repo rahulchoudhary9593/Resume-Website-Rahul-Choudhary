@@ -7,11 +7,16 @@
 
 body {
   background-color: #f0f0f0;
+  /* background-image: url("https://wallpaperaccess.com/full/317501.jpg"); */
   font-family: 'Roboto Flex', sans-serif;
   font-weight: 400; 
+  background-size: cover;   /* image poore screen ko cover karegi */
+  background-repeat: no-repeat; /* repeat nahi hogi */
+  background-position: center;  /* center align rahegi */
+  min-height: 100vh;
 }
 
-
+/* Lift effect */
 .lift {
   display: inline-block;
   transform: translateY(0);
@@ -22,7 +27,7 @@ body {
 
 .lift:hover {
   transform: translateY(-6px);
-  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 8px 18px rgba(255, 255, 255, 0.15);
 }
 
 
@@ -37,6 +42,7 @@ body {
   text-align: left;
   border-radius: 10%;
   padding: 0.25rem;
+  font-size:  1rem;
 }
 
 .headings:hover {
@@ -199,11 +205,11 @@ body {
   background: #b2c2bf;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .education_details td {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 
@@ -222,7 +228,7 @@ body {
   border-radius: 8px;
   text-align: center;
   transition: 0.3s;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .skill li:hover {
@@ -259,7 +265,7 @@ body {
   text-transform: none;
   text-decoration: none;
   color: #111;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 
@@ -334,7 +340,7 @@ body {
 }
 
 .project-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 8px;
 }
 
