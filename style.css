@@ -169,17 +169,14 @@ body {
 
 /* Education style*/
 .education_details {
-  width: 100vw;
+  width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  display: table;
-  overflow-x: auto;
-  white-space: nowrap;
 }
 
 .education_details th,
 .education_details td {
-  border: 1px solid #000000;
+  border: 1px solid #000;
   padding: 10px;
   text-align: left;
 }
@@ -193,16 +190,6 @@ body {
 
 .education_details td {
   font-size: 1rem;
-}
-
-.education_details a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.education_details a:hover {
-  color: #4062e8;
-
 }
 
 
@@ -481,25 +468,21 @@ body {
     padding: 4px 8px;
   }
 }
-
+/* For Education table responsiveness */
 @media (max-width: 768px) {
-  .education_details {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
   .education_details th,
   .education_details td {
-    padding: 6px;
-    font-size: 0.85rem;
+    padding: 14px 10px;   /* height badh gayi */
+    font-size: 1rem;
+    line-height: 1.6;     /* spacing between lines */
   }
 }
 
 @media (max-width: 480px) {
   .education_details th,
   .education_details td {
-    padding: 4px;
-    font-size: 0.75rem;
+    padding: 18px 12px;   /* aur bhi jyada height chhoti screen par */
+    font-size: 0.95rem;
+    line-height: 1.8;
   }
 }
