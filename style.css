@@ -465,6 +465,7 @@ body {
 
   .my_skill {
     font-size: 1rem;
+    font-weight: bolder;
   }
 
   .contact li,
@@ -491,17 +492,19 @@ body {
 @media (max-width: 768px) {
   .education_details th,
   .education_details td {
-    padding: 14px 10px;   /* height badh gayi */
+    padding: 14px 10px;   
     font-size: 1rem;
-    line-height: 1.6;     /* spacing between lines */
+    line-height: 1.6; 
+    text-decoration: none;    
   }
 }
 
 @media (max-width: 480px) {
   .education_details th,
   .education_details td {
-    padding: 18px 12px;   /* aur bhi jyada height chhoti screen par */
+    padding: 18px 12px;  
     font-size: 0.95rem;
     line-height: 1.8;
+    text-decoration: none;
   }
 }
