@@ -172,6 +172,9 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .education_details th,
@@ -400,6 +403,10 @@ body {
     padding: 10px;
   }
 
+  .education{
+
+  }
+
   .languages {
     max-width: 100%;
   }
@@ -476,5 +483,28 @@ body {
   .project-card a {
     font-size: 0.8rem;
     padding: 4px 8px;
+  }
+}
+@media (max-width: 768px) {
+  .education_details {
+    font-size: 0.9rem;
+  }
+
+  .education_details th,
+  .education_details td {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education_details {
+    font-size: 0.8rem;
+  }
+
+  .education_details th,
+  .education_details td {
+    padding: 4px;
+    font-size: 0.75rem;
   }
 }
