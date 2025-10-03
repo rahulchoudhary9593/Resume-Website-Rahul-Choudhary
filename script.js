@@ -23,13 +23,26 @@ function openEmail(e) {
 function makeCall(e) {
     e.preventDefault();
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const phoneNumber = "+918107199593";
+    const phoneNumber = "+918107199593"; // apna number
+    const message = "Hello Rahul Choudhary, I would like to know more about your work.";
 
     if (isMobile) {
-        // Mobile → open call app
-        window.location.href = `tel:${phoneNumber}`;
+        // WhatsApp link with pre-filled message
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.location.href = whatsappURL;
+
+        // Fallback to call after 1.5s if WhatsApp not installed
+        setTimeout(function() {
+            window.location.href = `tel:${phoneNumber}`;
+        }, 1500);
     } else {
-        // Desktop → show message / copy
-        alert(`Please call this number from your phone: ${phoneNumber}`);
+        // Desktop → WhatsApp Web or alert
+        const whatsappWebURL = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        const openWeb = confirm("Open WhatsApp Web to send a message? (Cancel to copy number)");
+        if (openWeb) {
+            window.open(whatsappWebURL, "_blank");
+        } else {
+            alert(`Please call or message this number from your phone: ${phoneNumber}`);
+        }
     }
 }
