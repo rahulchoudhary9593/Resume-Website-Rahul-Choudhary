@@ -73,8 +73,7 @@ body {
   white-space: nowrap;
   font-size: 400%;
   text-transform: uppercase;
-  letter-spacing: 2rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 1rem;
 }
 
 
@@ -96,17 +95,6 @@ body {
   transform: scale(1.05);
 }
 
-@media (max-width: 480px) {
-  .my_name {
-    letter-spacing: 1px;
-  }
-
-  .my_skill {
-    font-size: 20px;
-    /* readable on small phones */
-  }
-}
-
 
 /* Contact */
 
@@ -118,9 +106,10 @@ body {
 
 .contact ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
   gap: 10px;
   margin-top: 10px;
+  margin: auto;
   list-style: none;
 }
 
@@ -137,16 +126,6 @@ body {
   color: #ffffff;
   transform: scale(1.05);
 }
-
-/* @media (max-width: 100vw) {
-  .contact-list {
-    flex-direction: column;
-    /* stack buttons vertically 
-    align-items: center;
-    gap: 12px;
-  }
-
-  /* 📱 Mobile Responsive */
   .contact_member {
     width: 80%;
     text-align: center;
@@ -155,11 +134,79 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
     
-*/
+/* ------------------ Mobile (up to 480px) ------------------ */
+@media (max-width: 480px) {
+  .contact a {
+    font-size: 1.4rem; /* readable but compact */
+  }
+
+  .contact ul {
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 8px;
+    width: 100%;
+  }
+
+  .contact li {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .contact_member {
+    width: 95%;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* ------------------ Tablets (481px to 1024px) ------------------ */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .contact a {
+    font-size: 1.6rem;
+  }
+
+  .contact ul {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 12px;
+  }
+
+  .contact li {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .contact_member {
+    width: 85%;
+    font-size: 1.1rem;
+  }
+}
+
+/* ------------------ Desktop / Large Screens (1025px and above) ------------------ */
+@media (min-width: 1025px) {
+  .contact a {
+    font-size: 1.8rem;
+  }
+
+  .contact ul {
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 columns, more spacing */
+    gap: 15px;
+  }
+
+  .contact li {
+    padding: 14px;
+    font-size: 1.2rem;
+  }
+
+  .contact_member {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
 
 
+
+/* Lift effect */
 .lift {
-  /* hower effect  */
+
   transform: translateY(0);
   transition: transform 180ms ease, text-shadow 180ms ease;
   text-decoration: none;
@@ -169,28 +216,35 @@ body {
 .lift:hover {
   /* hower effect  */
   transform: translateY(-6px);
+  background-color: #000;
   text-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  color: #f9f9f9;
 }
+
+
 
 /* About Me */
 .about_section{
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1.2rem;
-  line-height: 1.6;
+  font-weight: bold;
+  line-height: 1.2;
   text-align: justify;
-  text-justify: inter-word
+  text-justify: inter-word;
 }
 .about_section p{
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-/* Education style*/
+/* Education detail style*/
+
 .education_details {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  overflow-x: auto; /* scroll if table too wide */
 }
 
 .education_details th,
@@ -198,31 +252,109 @@ body {
   border: 1px solid #000;
   padding: 10px;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .education_details th {
-  background: #b2c2bf;
-  color: #fff;
+  background: #e9f5ff;
+  color: #000;
   text-transform: uppercase;
   font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .education_details td {
   font-size: 1.2rem;
 }
 
+.education_details a {
+  text-decoration: none;
+  color: #111;
+  transition: color 0.3s ease;
+}
+.education_details a:hover {
+  color: #1358fa;
+  text-decoration: underline;
+}
 
-/* Skills */
+/* ---------------------------
+   📱 Mobile (up to 480px)
+---------------------------- */
+@media (max-width: 480px) {
+  .education_details th {
+    font-size: 1.3rem;
+    padding: 12px 8px;
+  }
+
+  .education_details td {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 6px;
+    line-height: 1.6;
+  }
+
+  .education_details {
+    display: block;
+    overflow-x: auto;
+  }
+  .education_details a{
+    text-decoration: underline;
+    color: #5f5f8a;
+  }
+}
+
+/* ---------------------------
+   💻 Tablet (481px - 768px)
+---------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .education_details th {
+    font-size: 1.5rem;
+    padding: 14px 10px;
+  }
+
+  .education_details td {
+    font-size: 1.2rem;
+    padding: 12px 8px;
+  }
+
+  .education_details {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .education_details a{
+    text-decoration: underline;
+    color: #5f5f8a;
+  }
+}
+
+/* ---------------------------
+   🖥️ Large Screens (769px+)
+---------------------------- */
+@media (min-width: 769px) {
+  .education_details th {
+    font-size: 1.8rem;
+    padding: 16px 12px;
+  }
+
+  .education_details td {
+    font-size: 1.3rem;
+    padding: 14px 10px;
+  }
+}
+
+
+ 
+/*_________Skills________*/
 .skill ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
   gap: 10px;
   margin-top: 10px;
   list-style: none;
 }
 
 .skill li {
-  background: #eaece5;
+  background: #e9f5ff;
   padding: 8px 12px;
   border-radius: 8px;
   text-align: center;
@@ -236,7 +368,53 @@ body {
   transform: scale(1.05);
 }
 
-/* certificate */
+/* 📱 Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .skill ul {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 8px;
+  }
+
+  .skill li {
+    font-size: 1.4rem;
+    padding: 10px;
+    font-weight: 500;
+  }
+}
+
+/* ---------------------------
+   💻 Tablet (481px - 768px)
+---------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .skill ul {
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 10px;
+  }
+
+  .skill li {
+    font-size: 1.5rem;
+    padding: 12px;
+    font-weight: 600;
+  }
+}
+
+/* ---------------------------
+   🖥️ Desktop (769px and above)
+---------------------------- */
+@media (min-width: 769px) {
+  .skill ul {
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    gap: 12px;
+  }
+
+  .skill li {
+    font-size: 1.6rem;
+    padding: 12px 14px;
+    font-weight: 800;
+  }
+}
+
+/* ✅ Responsive Styles for Certificate Section */
 
 .certificate ul {
   display: grid;
@@ -266,7 +444,67 @@ body {
   color: #111;
   font-size: 1.6rem;
 }
+.certificate a:hover {
+  color: #1358fa;
+  text-decoration: underline;
+}
 
+
+
+/* Large screens (Desktops & Laptops) */
+@media (min-width: 1025px) {
+  .certificate ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .certificate li {
+    font-size: 1.6rem;
+    padding: 12px;
+  }
+
+  .certificate a {
+    font-size: 1.6rem;
+  }
+}
+
+/* Medium screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .certificate ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .certificate li {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+
+  .certificate a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration-line: underline;
+  }
+}
+
+/* Small screens (Mobile phones) */
+@media (max-width: 767px) {
+  .certificate ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .certificate li {
+    font-size: 1.3rem;
+    padding: 12px;
+  }
+
+  .certificate a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
 
 
 /* Language */
@@ -303,14 +541,6 @@ body {
   /* gold stars */
   letter-spacing: 3px;
 }
-
-@media (max-width: 768px) {
-  .languages .certificate {
-    grid-template-columns: 1fr;
-    /* mobile view me ek hi column */
-  }
-}
-
 
 
 /* Projects */
@@ -369,142 +599,4 @@ body {
 .project-card:hover a {
   background: #fff;
   color: #da0909;
-}
-
-@media (max-width: 768px) {
-  .projects-list {
-    grid-template-columns: 1fr;
-    /* mobile view me ek hi column */
-  }
-}
-
-
-
-/* Media Query */
-
-@media only screen and (max-width: 768px) {
-
-  .resume-container {
-    max-width: 95%;
-    padding: 15px;
-  }
-
-  .my_name {
-    font-size: 2rem;
-    letter-spacing: 0.5rem; 
-    white-space: nowrap;
-  }
-
-  .my_skill {
-    font-size: 1.3rem;
-  }
-
-  .contact ul {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .contact li {
-    font-size: 1.2rem;
-    padding: 10px;
-  }
-
-  .languages {
-    max-width: 100%;
-  }
-
-  .languages li {
-    font-size: 1.3rem;
-    padding: 8px 0;
-  }
-
-  .languages .stars {
-    font-size: 1.2rem;
-  }
-
-  .projects-list {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .project-card {
-    padding: 12px;
-  }
-
-  .project-card h3 {
-    font-size: 1rem;
-  }
-
-  .project-card li {
-    font-size: 0.9rem;
-  }
-
-  .project-card a {
-    font-size: 0.85rem;
-    padding: 5px 10px;
-  }
-
-  .skill ul,
-  .certificate ul {
-    grid-template-columns: 1fr;
-  }
-
-  .skill li,
-  .certificate li {
-    font-size: 1.2rem;
-    padding: 8px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-
-  .my_name {
-    font-size: 1.5rem;
-    letter-spacing: 0.3rem;
-  }
-
-  .my_skill {
-    font-size: 1rem;
-    font-weight: bolder;
-  }
-
-  .contact li,
-  .skill li,
-  .certificate li {
-    font-size: 1rem;
-    padding: 6px;
-  }
-
-  .project-card h3 {
-    font-size: 0.9rem;
-  }
-
-  .project-card li {
-    font-size: 0.85rem;
-  }
-
-  .project-card a {
-    font-size: 0.8rem;
-    padding: 4px 8px;
-  }
-}
-/* For Education table responsiveness */
-@media (max-width: 768px) {
-  .education_details th,
-  .education_details td {
-    padding: 14px 10px;   
-    font-size: 1rem;
-    line-height: 1.6; 
-    text-decoration: none;    
-  }
-}
-
-@media (max-width: 480px) {
-  .education_details th,
-  .education_details td {
-    padding: 18px 12px;  
-    font-size: 0.95rem;
-    line-height: 1.8;
-    text-decoration: none;
-  }
 }
