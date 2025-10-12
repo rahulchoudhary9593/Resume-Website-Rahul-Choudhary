@@ -65,6 +65,10 @@ body {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 70%;
 }
+@media (max-width: 480px) {
+  scale: 0.8;
+  max-width: 95%;
+}
 
 /* My Name  */
 .my_name {
@@ -236,6 +240,10 @@ body {
 .about_section p{
   margin-bottom: 10px;
   margin-top: 10px;
+}
+/* ------------------ Mobile (up to 480px) ------------------ */
+@media (max-width: 480px) {
+
 }
 
 /* Education detail style*/
